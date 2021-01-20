@@ -1,3 +1,24 @@
+const toRegisterFunction = () => {
+  const background = document.querySelector("#background");
+  background.style.height = "100vh";
+
+  createRegister();
+
+  setTimeout(() => {
+    const login = document.querySelector("#login");
+    login.remove();
+  }, 1000);
+}
+
+const toLoginFunction = () => {
+  deleteRegister();
+
+  createLogin();
+
+  const background = document.querySelector("#background");
+  background.style.height = "0vh";
+}
+
 const deleteRegister = () => {
   const searchContainer = document.querySelector("#register");
 
@@ -8,15 +29,6 @@ const deleteRegister = () => {
   setTimeout(() => {
     searchContainer.remove();
   }, 500);
-}
-
-const toLoginFunction = () => {
-  deleteRegister();
-
-  createLogin();
-
-  const background = document.querySelector("#background");
-  background.style.height = "0vh";
 }
 
 const createRegister = () => {
@@ -144,18 +156,6 @@ const createLogin = () => {
   header.insertAdjacentElement("beforeend", img);
 
   app.appendChild(container);
-}
-
-const toRegisterFunction = () => {
-  const background = document.querySelector("#background");
-  background.style.height = "100vh";
-
-  createRegister();
-
-  setTimeout(() => {
-    const login = document.querySelector("#login");
-    login.remove();
-  }, 1000);
 }
 
 const start = () => {
