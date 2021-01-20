@@ -7,6 +7,8 @@
   margin: 0;
   outline: 0;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -162,6 +164,7 @@ body {
   cursor: pointer;
   color: var(--t2);
   padding: 0.4rem 0.8rem;
+  transition: all 0.1s ease-in;
 }
 
 .enter--register {
@@ -200,6 +203,19 @@ body {
   cursor: pointer;
   color: var(--t3);
   padding: 0.4rem 0.8rem;
+  transition: all 0.1s ease-in;
+}
+
+.enter--register > button:hover {
+  background: none;
+  color: var(--t2);
+  box-shadow: inset 0px 0px 0px 1px var(--t3);
+}
+
+.enter--login > button:hover {
+  background: none;
+  color: var(--t3);
+  box-shadow: inset 0px 0px 0px 1px var(--t3);
 }
 
 .background {
