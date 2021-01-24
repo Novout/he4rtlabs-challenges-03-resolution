@@ -7,6 +7,7 @@
   margin: 0;
   outline: 0;
   font-size: 16px;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,7 +20,6 @@ body {
 #app {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 :root {
@@ -243,6 +243,24 @@ body {
   background-color: var(--t1);
   z-index: 10;
   transition: height 1s;
+}
+
+.form--error {
+  border: 2px solid red !important;
+}
+
+.bg--dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 30;
+  width: 0px;
+  height: 0px;
+  border-radius: 9999px;
+  background-color: #111111;
+  transition: all 3s;
 }
 
 
