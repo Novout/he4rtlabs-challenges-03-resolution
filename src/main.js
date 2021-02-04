@@ -23,7 +23,7 @@ const enterAccount = async (e) => {
     response.style.color = "black";
     response.id = "response";
 
-    if(res.status === 400 || res.status === 403 ||res.status === 404) {
+    if(res.status === 400 || res.status === 401 ||res.status === 404) {
       response.textContent = `Não foi possível logar :(`;
     }
     else {
